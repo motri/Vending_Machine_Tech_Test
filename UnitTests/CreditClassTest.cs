@@ -18,6 +18,10 @@ namespace UnitTests
         {
             Assert.IsInstanceOf<Credit>(credit);
         }
+        public void Test_initial_credit_is_0()
+        {
+            Assert.AreEqual(credit.total, 0);
+        }
 
     }
 }

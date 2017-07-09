@@ -26,5 +26,13 @@ namespace UnitTests
         {
             Assert.IsInstanceOf<Hashtable>(item.list);
         }
+
+        [Test()]
+        public void List_hashtable_contains_item_names_as_keys_and_prices_as_values()
+        {
+            Assert.AreEqual(item.list["Crisps"], 0.40 );
+            Assert.AreEqual(item.list["Water"], 0.60 );
+        }
+    
     }
 }

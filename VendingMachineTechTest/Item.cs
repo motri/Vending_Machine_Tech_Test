@@ -10,7 +10,7 @@ namespace VendingMachineTechTest
         {
             list = new Hashtable();
             list.Add("Water", 0.60);
-            list.Add("Crips", 0.40);
+            list.Add("Crisps", 0.40);
         }
     }
 }

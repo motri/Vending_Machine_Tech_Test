@@ -36,11 +36,11 @@ namespace CreditClassTest
         [Test()]
         public void Add_method_only_allows_multiples_of_50p()
         {
-            using (StringWriter sw = new StringWriter())  
+            using (StringWriter alert = new StringWriter())  
 			{
-				Console.SetOut(sw);
+				Console.SetOut(alert);
 	            credit.Add(0.70);
-				Assert.AreEqual("Incorrect change added.\n", sw.ToString());
+				Assert.AreEqual("Incorrect change added.\n", alert.ToString());
 			}
 		}
     }

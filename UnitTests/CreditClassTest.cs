@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
 using System;
 using VendingMachineTechTest;
-namespace UnitTests
+namespace CreditClassTest
 {
     [TestFixture()]
     public class Test
@@ -14,13 +14,21 @@ namespace UnitTests
         }
 
         [Test()]
-        public void Test_if_class_is_instantiable()
+        public void Credit_class_is_instantiable()
         {
             Assert.IsInstanceOf<Credit>(credit);
         }
-        public void Test_initial_credit_is_0()
+        [Test()]
+        public void Initial_credit_total_is_0()
         {
             Assert.AreEqual(credit.total, 0);
+        }
+        [Test()]
+        public void Add_method_adds_credit_to_total()
+        {
+            credit.Add(0.50);
+            Assert.AreEqual(credit.total, 0.50);
+                  
         }
 
     }

@@ -7,7 +7,7 @@ namespace VendingMachineTechTest
 
         public Credit()
         {
-            total = 0;
+            total = 0.0m;
         }
 
         public void Add(decimal coin)

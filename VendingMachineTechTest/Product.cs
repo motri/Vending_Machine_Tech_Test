@@ -9,8 +9,8 @@ namespace VendingMachineTechTest
         public Product()
         {
             list = new Hashtable();
-            list.Add("Water", 0.60);
-            list.Add("Crisps", 0.40);
+            list.Add("Water", 0.6m);
+            list.Add("Crisps", 0.4m);
         }
     }
 }

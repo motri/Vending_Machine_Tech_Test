@@ -16,7 +16,7 @@ namespace UnitTests
         {
             basket = new Basket();
 			productList = new Hashtable();
-			productList.Add("Water", 0);
+			productList.Add("Water", 0.6m);
         }
 
         [Test()]

@@ -20,3 +20,5 @@ or
 open project using Visual Studio
 compile and run
 ```
+### Tests
+![Passing tests](https://www.imageupload.co.uk/images/2017/07/10/Capturadepantalla2017-07-10alas3.12.27.png)

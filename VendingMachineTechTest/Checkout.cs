@@ -22,5 +22,13 @@ namespace VendingMachineTechTest
                 total += (itemQuantity * itemPrice );
             }
         }
+
+        public void proceedToPayment(decimal credit, decimal total)
+        {
+            if (credit < total)
+            {
+                Console.WriteLine("Not enough credit, please add coins.");
+            }
+        }
     }
 }

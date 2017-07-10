@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
 using System;
 using System.Collections;
+using System.IO;
 using VendingMachineTechTest;
 namespace UnitTests
 {
@@ -37,9 +38,17 @@ namespace UnitTests
             Assert.AreEqual(checkout.total, 2.6m);
         }
 
+        [Test()]
         public void Raises_error_if_credit_insufficient()
         {
-            
+			using (StringWriter alert = new StringWriter())
+            {
+                Console.SetOut(alert);
+				credit = 0.0m;
+				checkout.calculateTotal(basketItems, productList);
+				checkout.proceedToPayment(credit, checkout.total);
+				Assert.AreEqual("Not enough credit, please add coins.\n", alert.ToString());
+			}
         }
     }
 }

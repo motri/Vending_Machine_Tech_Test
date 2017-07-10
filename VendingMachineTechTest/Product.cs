@@ -2,11 +2,11 @@
 using System.Collections;
 namespace VendingMachineTechTest
 {
-    public class Item
+    public class Product
     {
         public Hashtable list;
 
-        public Item()
+        public Product()
         {
             list = new Hashtable();
             list.Add("Water", 0.60);

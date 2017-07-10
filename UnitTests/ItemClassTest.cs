@@ -33,6 +33,5 @@ namespace UnitTests
             Assert.AreEqual(item.list["Crisps"], 0.40 );
             Assert.AreEqual(item.list["Water"], 0.60 );
         }
-    
     }
 }

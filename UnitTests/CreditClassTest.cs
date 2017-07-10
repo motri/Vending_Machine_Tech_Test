@@ -29,9 +29,16 @@ namespace CreditClassTest
         [Test()]
         public void Add_method_adds_credit_to_total()
         {
-            credit.Add(0.50);
+            credit.Add(0.5m);
             Assert.AreEqual(credit.total, 0.50);
         }
+
+		[Test()]
+		public void Add_method_adds_credit_to_total_2()
+		{
+			credit.Add(1.5m);
+			Assert.AreEqual(credit.total, 1.50);
+		}
 
         [Test()]
         public void Add_method_only_allows_multiples_of_50p()
@@ -39,7 +46,7 @@ namespace CreditClassTest
             using (StringWriter alert = new StringWriter())  
 			{
 				Console.SetOut(alert);
-	            credit.Add(0.70);
+	            credit.Add(0.7m);
 				Assert.AreEqual("Incorrect change added.\n", alert.ToString());
 			}
 		}

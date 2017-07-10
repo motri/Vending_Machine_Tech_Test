@@ -9,11 +9,14 @@ namespace UnitTests
     public class BasketClassTest
     {
         Basket basket;
-        [SetUp]
+        Hashtable productList;
+
+		[SetUp]
         public void SetUp()
         {
             basket = new Basket();
-
+			productList = new Hashtable();
+			productList.Add("Water", 0);
         }
 
         [Test()]
@@ -36,8 +39,6 @@ namespace UnitTests
         [Test()]
         public void Item_is_added_to_basket_by_AddItem_method()
         {
-			Hashtable productList = new Hashtable();
-			productList.Add("Water", 0);
             basket.AddItem("Water", 1, productList );
             Assert.IsNotEmpty(basket.items);
             Assert.AreEqual(basket.items["Water"], 1);
@@ -49,9 +50,7 @@ namespace UnitTests
             
 			using (StringWriter alert = new StringWriter())
 			{
-				Console.SetOut(alert);
-				Hashtable productList = new Hashtable();
-				productList.Add("Water", 0);
+                Console.SetOut(alert);
                 basket.AddItem("Soda", 4, productList);
 				Assert.AreEqual("Item not avaliable.\n", alert.ToString());
 			}
@@ -60,8 +59,6 @@ namespace UnitTests
 		[Test()]
 		public void If_product_already_in_basket_quantity_added_to_previous_number()
 		{
-			Hashtable productList = new Hashtable();
-			productList.Add("Water", 0);
             basket.AddItem("Water", 1, productList);
             basket.AddItem("Water", 3, productList);
             Assert.AreEqual(basket.items["Water"], 4);

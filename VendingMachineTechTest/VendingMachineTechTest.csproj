@@ -70,6 +70,7 @@
     <Compile Include="Credit.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Basket.cs" />
+    <Compile Include="Checkout.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

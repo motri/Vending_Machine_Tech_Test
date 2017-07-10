@@ -34,6 +34,7 @@
     <Compile Include="CreditClassTest.cs" />
     <Compile Include="ProductClassTest.cs" />
     <Compile Include="BasketClassTest.cs" />
+    <Compile Include="CheckoutClassTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

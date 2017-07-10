@@ -17,12 +17,16 @@ namespace UnitTests
         public void SetUp()
         {
             checkout = new Checkout();
-            productList = new Hashtable();
-            productList.Add("Water", 0.6m);
-            productList.Add("Crisps", 0.4m);
-            basketItems = new Hashtable();
-            basketItems.Add("Water", 3);
-            basketItems.Add("Crisps", 2);
+            productList = new Hashtable
+            {
+                { "Water", 0.6m },
+                { "Crisps", 0.4m }
+            };
+            basketItems = new Hashtable
+            {
+                { "Water", 3 },
+                { "Crisps", 2 }
+            };
         }
 
         [Test()]
@@ -34,21 +38,47 @@ namespace UnitTests
         [Test()]
         public void Calculates_total_owed()
         {
-            checkout.calculateTotal(basketItems, productList);
+            checkout.CalculateTotal(basketItems, productList);
             Assert.AreEqual(checkout.total, 2.6m);
         }
 
         [Test()]
         public void Raises_error_if_credit_insufficient()
         {
-			using (StringWriter alert = new StringWriter())
+            using (StringWriter alert = new StringWriter())
             {
                 Console.SetOut(alert);
-				credit = 0.0m;
-				checkout.calculateTotal(basketItems, productList);
-				checkout.proceedToPayment(credit, checkout.total);
-				Assert.AreEqual("Not enough credit, please add coins.\n", alert.ToString());
-			}
+                credit = 0.0m;
+                checkout.CalculateTotal(basketItems, productList);
+                checkout.ProceedToPayment(credit, checkout.total);
+                Assert.AreEqual("Not enough credit, please add coins.\n", alert.ToString());
+            }
+        }
+
+        [Test()]
+        public void Calculates_change()
+        {
+            credit = 3.5m;
+            checkout.CalculateTotal(basketItems, productList);
+            checkout.ProceedToPayment(credit, checkout.total);
+            Assert.AreEqual(checkout.change, 0.9m);
+        }
+
+        [Test()]
+        public void Completes_transaction_calculating_total_and_then_proceeds_to_payment()
+        {
+            credit = 3.5m;
+            checkout.CompleteTransaction(basketItems, productList, credit, checkout.total);
+            Assert.AreEqual(checkout.total, 2.6m);
+            Assert.AreEqual(checkout.change, 0.9m);
+
+        }
+        [Test()]
+        public void Sets_paid_to_true_when_credit_higher_equal_to_total()
+        {
+            credit = 3.5m;
+            checkout.CompleteTransaction(basketItems, productList, credit, checkout.total);
+            Assert.True(checkout.paid);
         }
     }
 }

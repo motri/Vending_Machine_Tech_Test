@@ -13,7 +13,7 @@ namespace VendingMachineTechTest
         public void Add(decimal coin)
         {
             if (coin % 0.5m == 0){
-             total = +coin;   
+             total =+ coin;   
             } else {
                 Console.WriteLine("Incorrect change added.");
             }

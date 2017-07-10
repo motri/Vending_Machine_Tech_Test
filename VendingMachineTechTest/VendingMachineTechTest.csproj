@@ -63,6 +63,9 @@
     <Reference Include="GitHub">
       <HintPath>..\packages\GitHub.1.5.4\lib\net461\GitHub.dll</HintPath>
     </Reference>
+    <Reference Include="nunit.engine.api">
+      <HintPath>..\packages\NUnit.Engine.Tool.3.6.0\lib\nunit.engine.api.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />

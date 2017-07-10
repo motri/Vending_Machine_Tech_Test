@@ -1,11 +1,11 @@
-﻿using NUnit.Framework;
-using System;
-using System.IO;
+﻿using System;
 using System.Collections;
+using System.IO;
+using NUnit.Framework;
 using VendingMachineTechTest;
 namespace UnitTests
 {
-    [TestFixture()]
+    [TestFixture]
     public class BasketClassTest
     {
         Basket basket;
@@ -15,28 +15,30 @@ namespace UnitTests
         public void SetUp()
         {
             basket = new Basket();
-			productList = new Hashtable();
-			productList.Add("Water", 0.6m);
+            productList = new Hashtable
+            {
+                { "Water", 0.6m }
+            };
         }
 
-        [Test()]
+        [Test]
         public void Class_can_instantiated()
         {
             Assert.IsInstanceOf<Basket>(basket);
         }
 
-        [Test()]
+        [Test]
 		public void Class_contains_a_hash_when_initialized()
 		{
 			Assert.IsInstanceOf<Hashtable>(basket.items);
 		}
-        [Test()]
+        [Test]
         public void Hash_is_empty_when_initialized()
         {
             Assert.IsEmpty(basket.items);
         }
 
-        [Test()]
+        [Test]
         public void Item_is_added_to_basket_by_AddItem_method()
         {
             basket.AddItem("Water", 1, productList );
@@ -44,7 +46,7 @@ namespace UnitTests
             Assert.AreEqual(basket.items["Water"], 1);
         }
 
-        [Test()]
+        [Test]
         public void Only_items_available_to_add_are_water_and_crisps()
         {
             
@@ -56,12 +58,13 @@ namespace UnitTests
 			}
         }
 
-		[Test()]
+		[Test]
 		public void If_product_already_in_basket_quantity_added_to_previous_number()
 		{
             basket.AddItem("Water", 1, productList);
             basket.AddItem("Water", 3, productList);
             Assert.AreEqual(basket.items["Water"], 4);
+
 		}
     }
 }

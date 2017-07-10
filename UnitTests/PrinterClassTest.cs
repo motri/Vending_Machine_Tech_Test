@@ -1,11 +1,10 @@
 ﻿using NUnit.Framework;
-using System;
 namespace UnitTests
 {
-    [TestFixture()]
+    [TestFixture]
     public class PrinterClassTest
     {
-        [Test()]
+        [Test]
         public void TestCase()
         {
         }

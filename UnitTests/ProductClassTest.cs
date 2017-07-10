@@ -1,10 +1,9 @@
-﻿using NUnit.Framework;
-using System;
-using System.Collections;
+﻿using System.Collections;
+using NUnit.Framework;
 using VendingMachineTechTest;
 namespace UnitTests
 {
-    [TestFixture()]
+    [TestFixture]
     public class ProductClassTest
     {
         Product product;
@@ -15,23 +14,26 @@ namespace UnitTests
             product = new Product();
         }
 
-        [Test()]
-        public void Class_can_be_initialized()
+        [Test]
+        public void Class_can_be_instantiated()
         {
             Assert.IsInstanceOf<Product>(product);
         }
 
-        [Test()]
+        [Test]
         public void Class_contains_a_hash_when_initialized()
         {
             Assert.IsInstanceOf<Hashtable>(product.list);
+			Assert.IsNotEmpty(product.list);
+			Assert.AreEqual(product.list.Count, 2);
         }
 
-        [Test()]
+        [Test]
         public void List_hashtable_contains_item_names_as_keys_and_prices_as_values()
         {
-            Assert.AreEqual(product.list["Crisps"], 0.40 );
-            Assert.AreEqual(product.list["Water"], 0.60 );
+
+            Assert.AreEqual(product.list["Crisps"], 0.40);
+            Assert.AreEqual(product.list["Water"], 0.60);
         }
     }
 }

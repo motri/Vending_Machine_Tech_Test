@@ -8,10 +8,10 @@ In this case the machine only takes 50 pence coins, only sells water(60p) and cr
 This program was written to be interacted with through the command line.
 
 ### Table of contents
-* [Quickstart](#Quickstart)
-* [Tests](#Tests)
-* [Tech](#Tech)
-* [Design process](#Design_process)
+* [Quickstart](Quickstart)
+* [Tests](Tests)
+* [Tech](Tech)
+* [Design process](Design_process)
 
 ### Quickstart
 First, clone this repository. Then:

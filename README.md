@@ -12,7 +12,7 @@ First, clone this repository. Then:
 
 ```
 open the command line
-navigate to folder ../VendingMachineTechTest/VendingMachineTechTest
+navigate to folder .../VendingMachineTechTest/VendingMachineTechTest
 run mono Project.exe
 ```
 or
@@ -21,4 +21,10 @@ open project using Visual Studio
 compile and run
 ```
 ### Tests
+To run the tests in Visual Studio:
+```
+open project folder in VS
+click run
+click on run unit tests
+```
 ![Passing tests](https://www.imageupload.co.uk/images/2017/07/10/Capturadepantalla2017-07-10alas3.12.27.png)

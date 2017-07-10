@@ -5,17 +5,16 @@ namespace VendingMachineTechTest
     public class Basket
     {
         public Hashtable items;
-        public Product product;
+
 
         public Basket()
         {
             items = new Hashtable();
-            product = new Product();
         }
 
-        public void AddItem(string itemName, int itemQuantity)
+        public void AddItem(string itemName, int itemQuantity, Hashtable productList)
         {
-            if (product.list.ContainsKey(itemName))
+            if (productList.ContainsKey(itemName))
             {
                 if (items.ContainsKey(itemName))
                 {

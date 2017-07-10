@@ -5,33 +5,33 @@ using VendingMachineTechTest;
 namespace UnitTests
 {
     [TestFixture()]
-    public class ItemClassTest
+    public class ProductClassTest
     {
-        Item item;
+        Product product;
 
         [SetUp]
         public void SetUp()
         {
-            item = new Item();
+            product = new Product();
         }
 
         [Test()]
         public void Class_can_be_initialized()
         {
-            Assert.IsInstanceOf<Item>(item);
+            Assert.IsInstanceOf<Product>(product);
         }
 
         [Test()]
         public void Class_contains_a_hash_when_initialized()
         {
-            Assert.IsInstanceOf<Hashtable>(item.list);
+            Assert.IsInstanceOf<Hashtable>(product.list);
         }
 
         [Test()]
         public void List_hashtable_contains_item_names_as_keys_and_prices_as_values()
         {
-            Assert.AreEqual(item.list["Crisps"], 0.40 );
-            Assert.AreEqual(item.list["Water"], 0.60 );
+            Assert.AreEqual(product.list["Crisps"], 0.40 );
+            Assert.AreEqual(product.list["Water"], 0.60 );
         }
     }
 }

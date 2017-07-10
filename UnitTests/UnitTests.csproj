@@ -32,7 +32,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CreditClassTest.cs" />
-    <Compile Include="ItemClassTest.cs" />
+    <Compile Include="ProductClassTest.cs" />
     <Compile Include="BasketClassTest.cs" />
   </ItemGroup>
   <ItemGroup>

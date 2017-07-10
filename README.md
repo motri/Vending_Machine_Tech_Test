@@ -39,6 +39,8 @@ click on run unit tests
 ### Tech
 * C#
 * .NET
-* NUnit
+* NUnit for unit testing
+* Travis-CI for continuos integration
+
 
 ### Design process

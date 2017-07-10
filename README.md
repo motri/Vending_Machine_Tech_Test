@@ -8,10 +8,10 @@ In this case the machine only takes 50 pence coins, only sells water(60p) and cr
 This program was written to be interacted with through the command line.
 
 ### Table of contents
-* [Quickstart](#Quickstart)
-* [Tests](#Tests)
-* [Tech](#Tech)
-* [Design process](#Design_process)
+* [Quickstart](https://github.com/motri/Vending_Machine_Tech_Test#quickstart)
+* [Tests](https://github.com/motri/Vending_Machine_Tech_Test#tests)
+* [Tech](https://github.com/motri/Vending_Machine_Tech_Test#tech)
+* [Design process](https://github.com/motri/Vending_Machine_Tech_Test#design-process)
 
 ### Quickstart
 First, clone this repository. Then:

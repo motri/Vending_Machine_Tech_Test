@@ -43,6 +43,7 @@ namespace VendingMachineTechTest
             {
                 paid = true;
                 change = credit - total;
+                credit = 0.0m;
             }
         }
     }

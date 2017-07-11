@@ -51,6 +51,7 @@
     <Compile Include="CheckoutClassTest.cs" />
     <Compile Include="CreditClassTest.cs" />
     <Compile Include="PrinterClassTest.cs" />
+    <Compile Include="VendingMachineClassTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

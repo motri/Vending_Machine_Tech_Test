@@ -75,6 +75,7 @@
     <Compile Include="Basket.cs" />
     <Compile Include="Checkout.cs" />
     <Compile Include="Printer.cs" />
+    <Compile Include="VendingMachine.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

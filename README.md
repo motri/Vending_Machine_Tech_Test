@@ -11,7 +11,7 @@ This program was written to be interacted with through the command line.
 * [Quickstart](https://github.com/motri/Vending_Machine_Tech_Test#quickstart)
 * [Tests](https://github.com/motri/Vending_Machine_Tech_Test#tests)
 * [Tech](https://github.com/motri/Vending_Machine_Tech_Test#tech)
-* [Design process](https://github.com/motri/Vending_Machine_Tech_Test#design-process)
+* [Diagram](https://github.com/motri/Vending_Machine_Tech_Test#diagram)
 
 ### Quickstart
 First, clone this repository. Then:
@@ -34,8 +34,8 @@ open project folder in VS
 click run
 click on run unit tests
 ```
-(please be aware currency based test might fail depending on your systems location)
 ![Passing tests](https://www.imageupload.co.uk/images/2017/07/12/Capturadepantalla2017-07-12alas2.27.50.png)
+(please be aware currency based tests might fail depending on your systems location)
 
 ### Tech
 * C#
@@ -44,5 +44,5 @@ click on run unit tests
 * Travis-CI for continuos integration
 
 
-### Design process
-![Class diagram](https://www.dropbox.com/s/2rki4rp2n9yolkg/20170712_020431.jpg?dl=0)
+### Diagram
+![Class diagram](https://photos-4.dropbox.com/t/2/AADn_OhZ060uRszeeKBOYwNti0BUpzl4LJoD_FNdh-XtEw/12/14509178/jpeg/32x32/1/_/1/2/20170712_020431.jpg/EOGb5QoYigsgAigC/AW2htKI1u3_GjWj1l5ROHSC63LIG9lElsM-66nRJUw4?size=1600x1200&size_mode=3)

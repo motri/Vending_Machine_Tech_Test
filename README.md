@@ -34,6 +34,7 @@ open project folder in VS
 click run
 click on run unit tests
 ```
+(please be aware currency based test might fail depending on your systems location)
 ![Passing tests](https://www.imageupload.co.uk/images/2017/07/10/Capturadepantalla2017-07-10alas3.12.27.png)
 
 ### Tech

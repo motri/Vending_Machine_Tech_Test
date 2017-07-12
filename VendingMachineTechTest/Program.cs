@@ -1,5 +1,5 @@
 ﻿using System;
-
+using VendingMachineTechTest;
 namespace VendingMachineTechTest
 {
     class MainClass
@@ -7,9 +7,10 @@ namespace VendingMachineTechTest
 
         public static void Main(string[] args)
         {
-            VendingMachine vendingMachine = new VendingMachine();
+            var vendingMachine = new VendingMachine();
             vendingMachine.Begin();
 
         }
     }
 }
+

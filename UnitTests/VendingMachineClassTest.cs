@@ -21,6 +21,9 @@ namespace UnitTests
             Assert.IsInstanceOf<Product>(vendingMachine.product);
             Assert.IsInstanceOf<Checkout>(vendingMachine.checkout);
             Assert.IsInstanceOf<Printer>(vendingMachine.printer);
+            Assert.IsInstanceOf<Header>(vendingMachine.header);
         }
+
+
     }
 }

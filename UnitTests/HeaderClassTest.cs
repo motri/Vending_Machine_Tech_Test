@@ -12,6 +12,7 @@ namespace UnitTests
 		Header header;
         Hashtable productList;
         Decimal credit;
+        Hashtable basketItems;
 
 		[SetUp]
 		public void SetUp()
@@ -23,6 +24,11 @@ namespace UnitTests
 				{ "Crisps", 0.4m }
 			};
             credit = 4.0m;
+			basketItems = new Hashtable
+			{
+				{ "Water", 3 },
+				{ "Crisps", 2 }
+			};
 		}
 
         [Test]
@@ -32,9 +38,10 @@ namespace UnitTests
 
 			{
                 Console.SetOut(headerOutput);
-                header.Print(productList, credit);
-                Assert.AreEqual("PRODUCTS: \nCrisps: 0,40 €\nWater: 0,60 €\nCREDIT: 4,00 €\n", headerOutput.ToString());
-
+                header.Print(productList, credit, basketItems);
+                Assert.AreEqual("PRODUCTS: \nCrisps: 0,40 €\nWater: 0,60 €\n" +
+                                "CREDIT: 4,00 €\n" +
+                                "BASKET:\n2 Crisps\n3 Water\n", headerOutput.ToString());
 			}
        
         }

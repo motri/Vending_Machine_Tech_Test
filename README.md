@@ -35,6 +35,7 @@ click run
 click on run unit tests
 ```
 ![Passing tests](https://www.imageupload.co.uk/images/2017/07/12/Capturadepantalla2017-07-12alas2.27.50.png)
+
 (please be aware currency based tests might fail depending on your systems location)
 
 ### Tech
@@ -45,4 +46,4 @@ click on run unit tests
 
 
 ### Diagram
-![Class diagram](https://photos-4.dropbox.com/t/2/AADn_OhZ060uRszeeKBOYwNti0BUpzl4LJoD_FNdh-XtEw/12/14509178/jpeg/32x32/1/_/1/2/20170712_020431.jpg/EOGb5QoYigsgAigC/AW2htKI1u3_GjWj1l5ROHSC63LIG9lElsM-66nRJUw4?size=1600x1200&size_mode=3)
+![Class diagram](http://res.cloudinary.com/motri/image/upload/v1499823308/20170712_020431_bdzeeq.jpg)

@@ -9,6 +9,7 @@ namespace VendingMachineTechTest
         public Checkout checkout;
         public Printer printer;
         public Header header;
+        public bool exit;
 
         public VendingMachine()
         {
@@ -22,22 +23,28 @@ namespace VendingMachineTechTest
 
         public void Begin()
         {
-            PrintHeader();
+            
 
-            string choice = Console.ReadLine();
+            while (exit == false)
+            {
+                PrintHeader();
 
-            if (choice == "Credit" || choice == "credit")
-            {
-                CreditMenu();
+				string choice = Console.ReadLine();
+
+				if (choice == "Credit" || choice == "credit")
+				{
+					CreditMenu();		
+				}
+				if (choice == "Add" || choice == "add")
+				{
+					BasketMenu();
+				}
+				if (choice == "checkout" || choice == "Checkout")
+				{
+					CheckoutMenu();
+				}
             }
-            if (choice == "Add" || choice == "add")
-            {
-                BasketMenu();
-            }
-            if (choice == "checkout" || choice == "Checkout")
-            {
-                CheckoutMenu();
-            }
+    
         }
 
         public void PrintHeader()
@@ -69,6 +76,7 @@ namespace VendingMachineTechTest
 			if (checkout.paid)
 			{
 				printer.RenderTransactionOutcome(checkout.change, basket.items);
+                exit = true;
 			}
         }
     }

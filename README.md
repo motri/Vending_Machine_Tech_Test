@@ -35,7 +35,7 @@ click run
 click on run unit tests
 ```
 (please be aware currency based test might fail depending on your systems location)
-![Passing tests](https://www.imageupload.co.uk/images/2017/07/10/Capturadepantalla2017-07-10alas3.12.27.png)
+![Passing tests](https://www.imageupload.co.uk/images/2017/07/12/Capturadepantalla2017-07-12alas2.27.50.png)
 
 ### Tech
 * C#
@@ -45,3 +45,4 @@ click on run unit tests
 
 
 ### Design process
+![Class diagram](https://www.dropbox.com/s/2rki4rp2n9yolkg/20170712_020431.jpg?dl=0)
